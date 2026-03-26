@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble Pro | Portfolio Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <main class="app-container">
+        <section id="home-screen" class="active">
+            <div class="glass-card fade-in">
+                <h1 class="logo-text">WORD SCRAMBLE <span>PRO</span></h1>
+                <p class="tagline">The Ultimate Lexical Challenge</p>
+                <button id="start-btn" class="btn-primary">Start Game</button>
+            </div>
+        </section>
+
+        <section id="menu-screen">
+            <div class="glass-card fade-in">
+                <h2>Select Theme</h2>
+                <select id="theme-select" class="custom-select"></select>
+
+                <div class="level-container">
+                    <h3>Levels</h3>
+                    <div id="level-ladder" class="ladder"></div>
+                </div>
+                <button id="back-home-btn" class="btn-secondary">Back to Home</button>
+            </div>
+        </section>
+
+        <section id="game-screen">
+            <div class="glass-card">
+                <div class="game-header">
+                    <div class="progress-box">Word <span id="current-word-num">1</span>/5</div>
+                    <div class="timer-container">
+                        <span id="timer-text">00</span>
+                    </div>
+                </div>
+
+                <div class="scramble-area">
+                    <h2 id="scrambled-word" class="word-display">------</h2>
+                    <p id="hint-display" class="hint-text">Hint: Press button below</p>
+                </div>
+
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Type your answer..." autocomplete="off">
+                    <div class="game-controls">
+                        <button id="submit-btn" class="btn-primary">Submit Answer</button>
+                        <button id="hint-btn" class="btn-accent">💡 Hint</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-screen">
+            <div class="glass-card fade-in">
+                <div class="trophy-icon">🏆</div>
+                <h2 id="result-title">Level Complete!</h2>
+                <div class="score-display">
+                    <p>Level Score: <span id="final-score">0</span></p>
+                </div>
+                <button id="menu-btn" class="btn-primary">Continue to Menu</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
